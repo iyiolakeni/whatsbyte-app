@@ -1,4 +1,27 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# WhatBytes Assessment Platform
+
+A modern web application built with Next.js and Tailwind CSS for skill assessment and tracking.
+
+## Features
+
+- **Skill Assessment Dashboard**: Track your progress with detailed statistics
+- **Interactive Charts**: 
+  - Line chart showing percentile comparison
+  - Pie chart displaying score distribution
+  - Progress bars for syllabus-wise analysis
+- **Real-time Updates**: Update your scores and see immediate changes in visualization
+- **Responsive Design**: Fully responsive layout that works on all device sizes
+
+## Tech Stack
+
+- **Framework**: Next.js 14 (App Router)
+- **Styling**: Tailwind CSS
+- **Charts**: Recharts
+- **Icons/Images**: Custom assets
+- **State Management**: React useState
+- **TypeScript**: For type safety
+
+## Project Structure
 
 ## Getting Started
 
