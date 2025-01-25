@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/app/components/interface.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1737794634233,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1737799828954,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,5 +2,12 @@\n     title: string;\r\n     progress: number;\r\n     color: string;\r\n     textColor?:string;\r\n+  }\r\n+\r\n+  export interface ChartData {\r\n+    name: string,\r\n+          uv: number,\r\n+          pv: number,\r\n+          amt: number,\r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1737800166703,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,5 +9,9 @@\n     name: string,\r\n           uv: number,\r\n           pv: number,\r\n           amt: number,\r\n+  }\r\n+\r\n+  export interface ChartDataProps{\r\n+    data: ChartData[];\r\n   }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1737794634233,
+            "name": "Commit-0",
+            "content": "export interface SyllabusItem {\r\n    title: string;\r\n    progress: number;\r\n    color: string;\r\n    textColor?:string;\r\n  }"
+        }
+    ]
+}

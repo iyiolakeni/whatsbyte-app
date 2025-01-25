@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/pages/internship/page.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1737760560418,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1737760560417,
+            "name": "Commit-0",
+            "content": "export default function Internship() {\r\n  return (\r\n    <div className=\"p-4\">\r\n      <h1 className=\"text-2xl font-bold mb-4\">Internship</h1>\r\n      {/* Add your internship page content here */}\r\n    </div>\r\n  );\r\n} "
+        }
+    ]
+}

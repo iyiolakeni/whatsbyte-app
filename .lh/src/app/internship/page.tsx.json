@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/app/internship/page.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1737760666856,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1737760918869,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+'use client'\r\n export default function Internship() {\r\n   return (\r\n     <div className=\"p-4\">\r\n       <h1 className=\"text-2xl font-bold mb-4\">Internship</h1>\r\n"
+                },
+                {
+                    "date": 1737760977793,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-'use client'\r\n+\r\n export default function Internship() {\r\n   return (\r\n     <div className=\"p-4\">\r\n       <h1 className=\"text-2xl font-bold mb-4\">Internship</h1>\r\n"
+                }
+            ],
+            "date": 1737760666856,
+            "name": "Commit-0",
+            "content": "export default function Internship() {\r\n  return (\r\n    <div className=\"p-4\">\r\n      <h1 className=\"text-2xl font-bold mb-4\">Internship</h1>\r\n      {/* Add your internship page content here */}\r\n    </div>\r\n  );\r\n} "
+        }
+    ]
+}

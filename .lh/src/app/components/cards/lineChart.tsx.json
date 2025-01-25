@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/app/components/cards/lineChart.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1737799694088,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1737799919654,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,19 +1,11 @@\n 'use client';\r\n \r\n import { Line, LineChart, ResponsiveContainer } from \"recharts\";\r\n+import { ChartData } from \"../interface\";\r\n \r\n-const data = [\r\n-    { name: 'Page A', pv: 2400 },\r\n-    { name: 'Page B', pv: 1398 },\r\n-    { name: 'Page C', pv: 9800 },\r\n-    { name: 'Page D', pv: 3908 },\r\n-    { name: 'Page E', pv: 4800 },\r\n-    { name: 'Page F', pv: 3800 },\r\n-    { name: 'Page G', pv: 4300 },\r\n-];\r\n \r\n-export const Chart = () => {\r\n+export const Chart = (data: ChartData[]) => {\r\n     return (\r\n         <div className=\"border rounded-xl px-7 py-10\">\r\n             <ResponsiveContainer width=\"100%\" height={300}>\r\n                 <LineChart width={300} height={100} data={data}>\r\n"
+                },
+                {
+                    "date": 1737800034154,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n 'use client';\r\n \r\n import { Line, LineChart, ResponsiveContainer } from \"recharts\";\r\n-import { ChartData } from \"../interface\";\r\n+import {  ChartDataProps } from \"../interface\";\r\n \r\n \r\n-export const Chart = (data: ChartData[]) => {\r\n+export const Chart = ({data}: ChartDataProps) => {\r\n     return (\r\n         <div className=\"border rounded-xl px-7 py-10\">\r\n             <ResponsiveContainer width=\"100%\" height={300}>\r\n                 <LineChart width={300} height={100} data={data}>\r\n"
+                },
+                {
+                    "date": 1737800079691,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,9 @@\n         <div className=\"border rounded-xl px-7 py-10\">\r\n             <ResponsiveContainer width=\"100%\" height={300}>\r\n                 <LineChart width={300} height={100} data={data}>\r\n                     <Line type=\"monotone\" dataKey=\"pv\" stroke=\"#8884d8\" strokeWidth={2} />\r\n+                    <Line type=\"monotone\" dataKey=\"pv\" stroke=\"#8884d8\" strokeWidth={3} />\r\n                 </LineChart>\r\n             </ResponsiveContainer>\r\n         </div>\r\n     );\r\n"
+                },
+                {
+                    "date": 1737800093729,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         <div className=\"border rounded-xl px-7 py-10\">\r\n             <ResponsiveContainer width=\"100%\" height={300}>\r\n                 <LineChart width={300} height={100} data={data}>\r\n                     <Line type=\"monotone\" dataKey=\"pv\" stroke=\"#8884d8\" strokeWidth={2} />\r\n-                    <Line type=\"monotone\" dataKey=\"pv\" stroke=\"#8884d8\" strokeWidth={3} />\r\n+                    <Line type=\"monotone\" dataKey=\"pv\" stroke=\"#ff84d8\" strokeWidth={3} />\r\n                 </LineChart>\r\n             </ResponsiveContainer>\r\n         </div>\r\n     );\r\n"
+                },
+                {
+                    "date": 1737800145328,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,17 +1,16 @@\n 'use client';\r\n \r\n import { Line, LineChart, ResponsiveContainer } from \"recharts\";\r\n-import {  ChartDataProps } from \"../interface\";\r\n+import { ChartDataProps } from \"../interface\";\r\n \r\n-\r\n export const Chart = ({data}: ChartDataProps) => {\r\n     return (\r\n         <div className=\"border rounded-xl px-7 py-10\">\r\n             <ResponsiveContainer width=\"100%\" height={300}>\r\n                 <LineChart width={300} height={100} data={data}>\r\n-                    <Line type=\"monotone\" dataKey=\"pv\" stroke=\"#8884d8\" strokeWidth={2} />\r\n-                    <Line type=\"monotone\" dataKey=\"pv\" stroke=\"#ff84d8\" strokeWidth={3} />\r\n+                    <Line type=\"monotone\" dataKey=\"uv\" stroke=\"#8884d8\" strokeWidth={2} />\r\n+                    <Line type=\"monotone\" dataKey=\"pv\" stroke=\"#ff84d8\" strokeWidth={2} />\r\n                 </LineChart>\r\n             </ResponsiveContainer>\r\n         </div>\r\n     );\r\n"
+                }
+            ],
+            "date": 1737799694088,
+            "name": "Commit-0",
+            "content": "'use client';\r\n\r\nimport { Line, LineChart, ResponsiveContainer } from \"recharts\";\r\n\r\nconst data = [\r\n    { name: 'Page A', pv: 2400 },\r\n    { name: 'Page B', pv: 1398 },\r\n    { name: 'Page C', pv: 9800 },\r\n    { name: 'Page D', pv: 3908 },\r\n    { name: 'Page E', pv: 4800 },\r\n    { name: 'Page F', pv: 3800 },\r\n    { name: 'Page G', pv: 4300 },\r\n];\r\n\r\nexport const Chart = () => {\r\n    return (\r\n        <div className=\"border rounded-xl px-7 py-10\">\r\n            <ResponsiveContainer width=\"100%\" height={300}>\r\n                <LineChart width={300} height={100} data={data}>\r\n                    <Line type=\"monotone\" dataKey=\"pv\" stroke=\"#8884d8\" strokeWidth={2} />\r\n                </LineChart>\r\n            </ResponsiveContainer>\r\n        </div>\r\n    );\r\n}; "
+        }
+    ]
+}
