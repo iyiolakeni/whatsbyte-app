@@ -13,7 +13,7 @@ export const PieChart = ({value = 0, max = 0}) => {
                 <h2 className="text-xl font-bold">Question Analysis</h2>
                 <p className="text-xl text-blue-500 font-semibold">{value}/{max}</p>
             </div>
-            <p className="text-grey-500 text-xl ">
+            <p className="text-grey-500 text-xl md:text-md ">
                 <strong>You scored {value} question correct out of {max}.</strong> However it still needs some improvements.
             </p>
             <div className="relative w-48 h-48 mx-auto mt-8">
