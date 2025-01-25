@@ -25,14 +25,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-white">
-        <div className="min-h-screen bg-white-50">
-          <Navbar />
-          <div className="flex">
-            <Sidebar />
-            <main className="flex-1 p-6 pr-2">
-              {children}
-            </main>
+      <body className="bg-white h-screen overflow-hidden">
+        <div className="h-screen flex flex-col">
+          <Navbar className="flex-none" />
+          <div className="flex flex-1 overflow-hidden">
+        <Sidebar className="flex-none" />
+        <main className="flex-1 overflow-auto p-6 pr-2">
+          {children}
+        </main>
           </div>
         </div>
       </body>

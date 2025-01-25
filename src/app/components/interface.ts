@@ -6,10 +6,8 @@ export interface SyllabusItem {
   }
 
   export interface ChartData {
-    name: string,
-          uv: number,
-          pv: number,
-          amt: number,
+    x: number,
+    y: number,
   }
 
   export interface ChartDataProps{

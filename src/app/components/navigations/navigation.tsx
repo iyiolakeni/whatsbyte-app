@@ -15,8 +15,8 @@ const menuItems = [
   { 
     name: 'Skill Test', 
     href: '/skill-test', 
-    icon: '/assets/dashboard.png',
-    activeIcon: '/assets/dashboard-active.png'
+    icon: '/assets/badgee.png',
+    activeIcon: '/assets/activeBadge.png'
   },
   { 
     name: 'Internship', 
@@ -27,11 +27,15 @@ const menuItems = [
   // Add more items as needed
 ];
 
-export const Sidebar = () => {
+interface NavProps {
+    className?: string;
+}
+
+export const Sidebar = ({ className }: NavProps) => {
     const pathname = usePathname();
 
     return (
-        <aside className="w-64 h-screen bg-white-500">
+        <aside className={`w-64 h-screen bg-white-500 ${className || ''}`}>
           <div className="bg-white-800 text-black h-screen p-6 flex flex-col space-y-4 border-r">
             {menuItems.map((item) => {
               const isActive = pathname === item.href;
@@ -63,9 +67,9 @@ export const Sidebar = () => {
 };
   
 // Navbar Component
-export const Navbar = () => {
+export const Navbar = ({ className }: NavProps) => {
   return (
-    <nav className="text-white py-4 px-6 flex justify-between items-center bg-white-50 text-black border-b border-gray-200">
+    <nav className={`py-4 px-6 flex justify-between items-center bg-white-50 text-black border-b border-gray-200 ${className || ''}`}>
       <div className="font-bold text-lg flex gap-3 items-center">
           <Image src={"/assets/whatsbyte.jpg"} alt="" width={44} height={44} />
           <p className="text-3xl font-bold">

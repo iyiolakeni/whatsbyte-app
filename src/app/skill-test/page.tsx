@@ -9,10 +9,7 @@ import { useState } from "react";
 import { Modal } from "../components/cards/modal";
 
 export default function SkillTest() {
-  const [openModal, setOpenModal] = useState(true);
-    // const rank: number = 2;
-    // const percentile: number = 90;
-    // const score: number = 10;
+  const [openModal, setOpenModal] = useState(false);
     const [rank, setRank] = useState(2);
     const [percentile, setPercentile] = useState(90);
     const [score, setScore] = useState(10);
@@ -29,57 +26,21 @@ export default function SkillTest() {
       { icon: '/assets/approve.png', value: `${score} / 15`, label: 'Correct Answers' }
     ];
 
-    const data: ChartData[] = [
-        {
-          name: 'Page A',
-          uv: 4000,
-          pv: 2400,
-          amt: 2400,
-        },
-        {
-          name: 'Page B',
-          uv: 3000,
-          pv: 1398,
-          amt: 2210,
-        },
-        {
-          name: 'Page C',
-          uv: 2000,
-          pv: 9800,
-          amt: 2290,
-        },
-        {
-          name: 'Page D',
-          uv: 2780,
-          pv: 3908,
-          amt: 2000,
-        },
-        {
-          name: 'Page E',
-          uv: 1890,
-          pv: 4800,
-          amt: 2181,
-        },
-        {
-          name: 'Page F',
-          uv: 2390,
-          pv: 3800,
-          amt: 2500,
-        },
-        {
-          name: 'Page G',
-          uv: 3490,
-          pv: 4300,
-          amt: 2100,
-        },
-      ];
+    const data: ChartData[] =  [
+      { x: 0, y: 0 },
+      { x: 25, y: 25 },
+      { x: 50, y: 50 },
+      { x: 75, y: 25 },
+      { x: 100, y: 10 }
+  ];
+    
 
   return (
     <div className="p-4">
       <h1 className="text-xl mb-8 text-gray-500">Skill Test</h1>
       
-<div className="flex gap-10">
-<div className="space-y-8 w-3/5">
+<div className="flex flex-col lg:flex-row gap-10">
+<div className="xl:space-y-12 space-y-14 md:space-y-8 sm:space-y-4 2xl:space-y-10 w-full lg:w-3/5">
       <div className="flex justify-between  border rounded-xl w-full p-5">
         <div className="flex gap-3 justify-center items-center">
         <Image src={"/assets/html.png"} className="h-30 w-30 md:h-10 md:w-10" alt="Skill Test" width={40} height={40} />
@@ -92,7 +53,7 @@ export default function SkillTest() {
       </div>
       <div className="container border rounded-xl p-3 w-full">
         <h2 className="text-lg font-bold">Quick Statistics</h2>
-        <div className="flex flex-col md:flex-row w-full">
+        <div className="grid grid-cols-3 md:grid-col-3 w-full">
   {card.map((stat, index) => (
     <Card
       key={stat.label}
@@ -106,7 +67,7 @@ export default function SkillTest() {
       </div>
       <Chart data={data} percentile={percentile} />
 </div>
-<div className="space-y-8 w-2/5">
+<div className="space-y-8 w-full lg:w-2/5">
       <Syllabus />
       <PieChart value={score} max={15} />
 </div>

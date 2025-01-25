@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 2,
+            "activePatchIndex": 5,
             "patches": [
                 {
                     "date": 1737794634233,
@@ -16,6 +16,18 @@
                 {
                     "date": 1737800166703,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,5 +9,9 @@\n     name: string,\r\n           uv: number,\r\n           pv: number,\r\n           amt: number,\r\n+  }\r\n+\r\n+  export interface ChartDataProps{\r\n+    data: ChartData[];\r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1737833106852,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,12 +6,26 @@\n   }\r\n \r\n   export interface ChartData {\r\n     name: string,\r\n-          uv: number,\r\n-          pv: number,\r\n-          amt: number,\r\n+    uv: number,\r\n   }\r\n \r\n   export interface ChartDataProps{\r\n     data: ChartData[];\r\n+    percentile: number;\r\n+  }\r\n+\r\n+  export interface Card {\r\n+    icon: string;\r\n+    value: number | string;\r\n+    label: string;\r\n+    isLastItem?: boolean;\r\n+  }\r\n+  export interface ModalDetails{\r\n+    isOpen: boolean;\r\n+    onClose: () => void;\r\n+    currentRank: number;\r\n+    currentPercentile: number;\r\n+    currentScore: number;\r\n+    onUpdate: (currenRank: number, currentPercentile: number, currentScore: number) => void;\r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1737833203631,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   }\r\n \r\n   export interface ChartData {\r\n     name: string,\r\n-    uv: number,\r\n+    percentile: number,\r\n   }\r\n \r\n   export interface ChartDataProps{\r\n     data: ChartData[];\r\n"
+                },
+                {
+                    "date": 1737833603788,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,10 @@\n     textColor?:string;\r\n   }\r\n \r\n   export interface ChartData {\r\n-    name: string,\r\n-    percentile: number,\r\n+    x: number,\r\n+    y: number,\r\n   }\r\n \r\n   export interface ChartDataProps{\r\n     data: ChartData[];\r\n"
                 }
             ],
             "date": 1737794634233,

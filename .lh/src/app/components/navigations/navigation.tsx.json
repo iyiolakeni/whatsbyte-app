@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 62,
+            "activePatchIndex": 73,
             "patches": [
                 {
                     "date": 1737756081224,
@@ -256,6 +256,50 @@
                 {
                     "date": 1737760882991,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+'use client';\r\n+\r\n import Link from \"next/link\";\r\n import Image from \"next/image\";\r\n import { usePathname } from \"next/navigation\";\r\n \r\n"
+                },
+                {
+                    "date": 1737839435007,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,9 +64,9 @@\n   \r\n // Navbar Component\r\n export const Navbar = () => {\r\n   return (\r\n-    <nav className=\"text-white py-4 px-6 flex justify-between items-center bg-white-50 text-black border-b border-gray-200\">\r\n+    <nav className=\"py-4 px-6 flex justify-between items-center bg-white-50 text-black border-b border-gray-200\">\r\n       <div className=\"font-bold text-lg flex gap-3 items-center\">\r\n           <Image src={\"/assets/whatsbyte.jpg\"} alt=\"\" width={44} height={44} />\r\n           <p className=\"text-3xl font-bold\">\r\n           WhatBytes\r\n"
+                },
+                {
+                    "date": 1737839956837,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n export const Sidebar = () => {\r\n     const pathname = usePathname();\r\n \r\n     return (\r\n-        <aside className=\"w-64 h-screen bg-white-500\">\r\n+        <aside className=\"w-64 max-h-full bg-white-500\">\r\n           <div className=\"bg-white-800 text-black h-screen p-6 flex flex-col space-y-4 border-r\">\r\n             {menuItems.map((item) => {\r\n               const isActive = pathname === item.href;\r\n               return (\r\n"
+                },
+                {
+                    "date": 1737839967862,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n export const Sidebar = () => {\r\n     const pathname = usePathname();\r\n \r\n     return (\r\n-        <aside className=\"w-64 max-h-full bg-white-500\">\r\n+        <aside className=\"w-64 h-full bg-white-500\">\r\n           <div className=\"bg-white-800 text-black h-screen p-6 flex flex-col space-y-4 border-r\">\r\n             {menuItems.map((item) => {\r\n               const isActive = pathname === item.href;\r\n               return (\r\n"
+                },
+                {
+                    "date": 1737839979511,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n     const pathname = usePathname();\r\n \r\n     return (\r\n         <aside className=\"w-64 h-full bg-white-500\">\r\n-          <div className=\"bg-white-800 text-black h-screen p-6 flex flex-col space-y-4 border-r\">\r\n+          <div className=\"bg-white-800 text-black h-full p-6 flex flex-col space-y-4 border-r\">\r\n             {menuItems.map((item) => {\r\n               const isActive = pathname === item.href;\r\n               return (\r\n                 <Link \r\n"
+                },
+                {
+                    "date": 1737840006334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n     const pathname = usePathname();\r\n \r\n     return (\r\n         <aside className=\"w-64 h-full bg-white-500\">\r\n-          <div className=\"bg-white-800 text-black h-full p-6 flex flex-col space-y-4 border-r\">\r\n+          <div className=\"bg-white-800 text-black h-svh p-6 flex flex-col space-y-4 border-r\">\r\n             {menuItems.map((item) => {\r\n               const isActive = pathname === item.href;\r\n               return (\r\n                 <Link \r\n"
+                },
+                {
+                    "date": 1737840047671,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,10 +30,10 @@\n export const Sidebar = () => {\r\n     const pathname = usePathname();\r\n \r\n     return (\r\n-        <aside className=\"w-64 h-full bg-white-500\">\r\n-          <div className=\"bg-white-800 text-black h-svh p-6 flex flex-col space-y-4 border-r\">\r\n+        <aside className=\"w-64 h-screen bg-white-500\">\r\n+          <div className=\"bg-white-800 text-black h-screen p-6 flex flex-col space-y-4 border-r\">\r\n             {menuItems.map((item) => {\r\n               const isActive = pathname === item.href;\r\n               return (\r\n                 <Link \r\n"
+                },
+                {
+                    "date": 1737840167727,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,13 +26,17 @@\n   },\r\n   // Add more items as needed\r\n ];\r\n \r\n-export const Sidebar = () => {\r\n+interface NavProps {\r\n+    className?: string;\r\n+}\r\n+\r\n+export const Sidebar = ({ className }: NavProps) => {\r\n     const pathname = usePathname();\r\n \r\n     return (\r\n-        <aside className=\"w-64 h-screen bg-white-500\">\r\n+        <aside className={`w-64 h-screen bg-white-500 ${className || ''}`}>\r\n           <div className=\"bg-white-800 text-black h-screen p-6 flex flex-col space-y-4 border-r\">\r\n             {menuItems.map((item) => {\r\n               const isActive = pathname === item.href;\r\n               return (\r\n@@ -62,11 +66,11 @@\n     );\r\n };\r\n   \r\n // Navbar Component\r\n-export const Navbar = () => {\r\n+export const Navbar = ({ className }: NavProps) => {\r\n   return (\r\n-    <nav className=\"py-4 px-6 flex justify-between items-center bg-white-50 text-black border-b border-gray-200\">\r\n+    <nav className={`py-4 px-6 flex justify-between items-center bg-white-50 text-black border-b border-gray-200 ${className || ''}`}>\r\n       <div className=\"font-bold text-lg flex gap-3 items-center\">\r\n           <Image src={\"/assets/whatsbyte.jpg\"} alt=\"\" width={44} height={44} />\r\n           <p className=\"text-3xl font-bold\">\r\n           WhatBytes\r\n"
+                },
+                {
+                    "date": 1737841585345,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,10 +14,10 @@\n   },\r\n   { \r\n     name: 'Skill Test', \r\n     href: '/skill-test', \r\n-    icon: '/assets/dashboard.png',\r\n-    activeIcon: '/assets/dashboard-active.png'\r\n+    icon: '/assets/badgee.png',\r\n+    activeIcon: '/assets/activeBadge.png'\r\n   },\r\n   { \r\n     name: 'Internship', \r\n     href: '/internship', \r\n"
+                },
+                {
+                    "date": 1737842326163,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n export const Sidebar = ({ className }: NavProps) => {\r\n     const pathname = usePathname();\r\n \r\n     return (\r\n-        <aside className={`w-64 h-screen bg-white-500 ${className || ''}`}>\r\n+        <aside className={`w-64 lg:w-36 h-screen bg-white-500 ${className || ''}`}>\r\n           <div className=\"bg-white-800 text-black h-screen p-6 flex flex-col space-y-4 border-r\">\r\n             {menuItems.map((item) => {\r\n               const isActive = pathname === item.href;\r\n               return (\r\n"
+                },
+                {
+                    "date": 1737842352702,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n export const Sidebar = ({ className }: NavProps) => {\r\n     const pathname = usePathname();\r\n \r\n     return (\r\n-        <aside className={`w-64 lg:w-36 h-screen bg-white-500 ${className || ''}`}>\r\n+        <aside className={`w-64 sm:w-36 h-screen bg-white-500 ${className || ''}`}>\r\n           <div className=\"bg-white-800 text-black h-screen p-6 flex flex-col space-y-4 border-r\">\r\n             {menuItems.map((item) => {\r\n               const isActive = pathname === item.href;\r\n               return (\r\n"
+                },
+                {
+                    "date": 1737842376360,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n export const Sidebar = ({ className }: NavProps) => {\r\n     const pathname = usePathname();\r\n \r\n     return (\r\n-        <aside className={`w-64 sm:w-36 h-screen bg-white-500 ${className || ''}`}>\r\n+        <aside className={`w-64 h-screen bg-white-500 ${className || ''}`}>\r\n           <div className=\"bg-white-800 text-black h-screen p-6 flex flex-col space-y-4 border-r\">\r\n             {menuItems.map((item) => {\r\n               const isActive = pathname === item.href;\r\n               return (\r\n"
                 }
             ],
             "date": 1737756081224,

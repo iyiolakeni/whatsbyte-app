@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 5,
+            "activePatchIndex": 8,
             "patches": [
                 {
                     "date": 1737756081085,
@@ -28,6 +28,18 @@
                 {
                     "date": 1737795139352,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n         <div className=\"min-h-screen bg-white-50\">\n           <Navbar />\n           <div className=\"flex\">\n             <Sidebar />\n-            <main className=\"flex-1 p-6\">\n+            <main className=\"flex-1 p-6 pr-\">\n               {children}\n             </main>\n           </div>\n         </div>\n"
+                },
+                {
+                    "date": 1737840046360,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,13 +25,13 @@\n }) {\n   return (\n     <html lang=\"en\">\n       <body className=\"bg-white\">\n-        <div className=\"min-h-screen bg-white-50\">\n+        <div className=\"h-screen bg-white-50\">\n           <Navbar />\n           <div className=\"flex\">\n             <Sidebar />\n-            <main className=\"flex-1 p-6 pr-\">\n+            <main className=\"flex-1 p-6 pr-2\">\n               {children}\n             </main>\n           </div>\n         </div>\n"
+                },
+                {
+                    "date": 1737840069817,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n   children: React.ReactNode\n }) {\n   return (\n     <html lang=\"en\">\n-      <body className=\"bg-white\">\n+      <body className=\"bg-white h-screen\">\n         <div className=\"h-screen bg-white-50\">\n           <Navbar />\n           <div className=\"flex\">\n             <Sidebar />\n"
+                },
+                {
+                    "date": 1737840169701,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,16 +24,16 @@\n   children: React.ReactNode\n }) {\n   return (\n     <html lang=\"en\">\n-      <body className=\"bg-white h-screen\">\n-        <div className=\"h-screen bg-white-50\">\n-          <Navbar />\n-          <div className=\"flex\">\n-            <Sidebar />\n-            <main className=\"flex-1 p-6 pr-2\">\n-              {children}\n-            </main>\n+      <body className=\"bg-white h-screen overflow-hidden\">\n+        <div className=\"h-screen flex flex-col\">\n+          <Navbar className=\"flex-none\" />\n+          <div className=\"flex flex-1 overflow-hidden\">\n+        <Sidebar className=\"flex-none\" />\n+        <main className=\"flex-1 overflow-auto p-6 pr-2\">\n+          {children}\n+        </main>\n           </div>\n         </div>\n       </body>\n     </html>\n"
                 }
             ],
             "date": 1737756081085,

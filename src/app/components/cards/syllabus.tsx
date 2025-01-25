@@ -39,9 +39,9 @@ export function Syllabus() {
 }
 
 export const Card = ({ icon, value, label, isLastItem }: CardInterface) => (
-  <div className={`flex items-center gap-3 md:gap-3 p-4 ${!isLastItem ? 'border-b md:border-b-0 md:border-r' : ''}`}>
+  <div className={`flex items-center gap-6 md:gap-3 p-4 ${!isLastItem ? 'border-b md:border-b-0 md:border-r' : ''}`}>
     <Image 
-      className="rounded-full p-5 md:p-3 h-16 w-16 md:h-10 md:w-10 bg-gray-100" 
+      className="rounded-full p-5 mr-3 md:p-3 h-16 w-16 md:h-10 md:w-10 bg-gray-100" 
       src={icon} 
       alt={label}
       width={50} 
